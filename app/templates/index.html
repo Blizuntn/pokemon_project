@@ -1,0 +1,17 @@
+{% extends './layout.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Available Pokemon</h1>
+  {%for i in range(0, len)%}
+<div class="container">
+<div class="card">
+    <h5 class="card-header">{{PokemonNames[i]}}</h5>
+    <div class="card-body">
+      <h5 class="card-title">{{PokemonTypes[i]}}</h5>
+      <p class="card-text">{{PokemonEffects[i]}}</p>
+    </div>
+  </div>
+</div>
+{%endfor%}
+{% endblock content %}

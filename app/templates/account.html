@@ -1,0 +1,17 @@
+{%extends "layout.html"%}
+
+{% block content%}
+<div class="container">
+<h1>{{ current_user.name.title() }}'s Pokemon Collection</h1>
+{% for pokemon in pokemon%}
+    <div class="card" style="width: 18rem; border: solid;">
+        <div class="card-body">
+          <h3 class="card-title">{{ pokemon.name }}</h3>
+          <h4 class="card-subtitle mb-2 ">{{ pokemon.type_ }}</h4>
+          <h6 class="card-text">{{ pokemon.description }}</h6>
+        </div>
+      </div>
+</div>
+{% endfor %}
+
+{% endblock content%}
